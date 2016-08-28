@@ -1,26 +1,26 @@
 {
-  "name": "react-starter",
-  "version": "1.0.1",
-  "description": "Starter kit for React + Redux + Fetch + Async",
+  "name": "mondo-ai-site",
+  "version": "0.0.1",
+  "description": "mondomeds.com new AI survey site in React + Redux + Fetch + Async",
   "scripts": {
     "start": "node devServer.js",
     "build": "NODE_ENV=production webpack --config webpack.config.prod.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/didierfranc/react-async-starter.git"
+    "url": "git+https://github.com/atomic-swerve/mondo-ai-site.git"
   },
   "keywords": [
     "react",
     "redux",
     "async"
   ],
-  "author": "Didier Franc",
+  "author": "Piers Excell-Rehm",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/didierfranc/react-async-starter/issues"
+    "url": "https://github.com/atomic-swerve/mondo-ai-site/issues"
   },
-  "homepage": "https://github.com/didierfranc/react-async-starter#readme",
+  "homepage": "https://github.com/atomic-swerve/mondo-ai-site#readme",
   "devDependencies": {
     "babel-core": "^6.9.1",
     "babel-loader": "^6.2.4",
@@ -33,6 +33,8 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "apiai": "^2.0.7",
+    "babel-runtime": "^6.9.2",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "react-redux": "^4.4.5",
@@ -40,7 +42,6 @@
     "react-router-redux": "^4.0.4",
     "redux": "^3.5.2",
     "redux-thunk": "^2.1.0",
-    "whatwg-fetch": "^1.0.0",
-    "babel-runtime": "^6.9.2"
+    "whatwg-fetch": "^1.0.0"
   }
 }
