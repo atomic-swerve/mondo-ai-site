@@ -1,19 +1,11 @@
 import React from 'react'
 
-const getChangedValue = (e) => (
-    e.target.value
+const ClientTextBox = ({props, updateClientText}) => (
+    <input type="text" maxLength="255" disabled={props.awaitingServer} value={props.clientText} onChange={(e) => updateClientText(e.target.value)} />
 )
 
-const TextBox = ({text, disabled, onChangeCallback = null}) => (
-    <input type="text" maxLength="255" disabled={disabled} value={text} onChange={onChangeCallback ? (e) => onChangeCallback(getChangedValue(e)) : null} />
-)
-
-const ClientTextSubmit = ({clientText, sendClientMessage}) => (
-    <input type="button" value="Submit" onClick={() => sendClientMessage(clientText)} />
-)
-
-const ClientTextBox = ({clientText, awaitingServer, updateClientText}) => (
-    <TextBox text={clientText} disabled={awaitingServer} onChangeCallback={(t) => updateClientText(t)} />
+const ClientTextSubmit = ({props, sendClientMessage}) => (
+    <input type="button" value="Submit" onClick={() => sendClientMessage(props.clientText, props.apiai)} />
 )
 
 const ClientText = (props) => (
@@ -23,16 +15,15 @@ const ClientText = (props) => (
     </div>
 )
 
-const ServerTextBox = ({text}) => (
-    <p>{text}</p>
+const ServerTextBox = (props) => (
+    <p>{props.serverText}</p>
 )
 
 const ServerText = (props) => (
     <div>
-        <ServerTextBox text={props.message.serverText} />
+        <ServerTextBox {...props} />
     </div>
 )
-
 
 const Main = (props) => (
   <div>
